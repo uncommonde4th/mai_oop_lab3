@@ -63,7 +63,7 @@ std::ostream& operator<<(std::ostream& os, const Figure& figure) {
     return os;
 }
 
-std::ostream& operator>>(std::ostream& is, Figure& figure) {
+std::istream& operator>>(std::istream& is, Figure& figure) {
     figure.read(is);
     return is;
 }

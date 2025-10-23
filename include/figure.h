@@ -19,10 +19,10 @@ class Figure {
         virtual double getArea() const = 0;
         explicit operator double() const { return getArea(); }
         virtual void print(std::ostream& os) const = 0;
-        virtual void read(std::ostream& is) = 0;
+        virtual void read(std::istream& is) = 0;
 
         friend std::ostream&operator<<(std::ostream& os, const Figure& other);
-        friend std::ostream&operator>>(std::ostream& is, Figure& other);
+        friend std::istream&operator>>(std::istream& is, Figure& other);
 
     protected:
         unsigned int numOfPoints;
