@@ -19,7 +19,19 @@ void Array::addFigure(Figure *figure) {
     }
 }
 
-//void Array::figuresPrint() const {
+void Array::printAll() const {
+    for (unsigned int i = 0; i < numOfFigures; i++) {
+        std::cout << "Фигура " << i << ": ";
+        figures[i]->print(std::cout);
+        std::cout << std::endl;
+        
+        Point center = figures[i]->getCenter();
+        std::cout << "Центр: (" << center.x << ", " << center.y << ")" << std::endl;
+        
+        double area = figures[i]->getArea();
+        std::cout << "Площадь: " << area << std::endl;
+    }
+}
 
 double Array::areaOfAllFigures() const {
     double area = 0;

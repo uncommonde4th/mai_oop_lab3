@@ -13,7 +13,7 @@ class Array {
         ~Array();
 
         void addFigure(Figure *figure);
-        //figuresPrint();
+        void printAll() const;
         double areaOfAllFigures() const;
         void deleteFigure(unsigned int index);
 
