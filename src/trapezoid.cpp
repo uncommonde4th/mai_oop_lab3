@@ -24,11 +24,11 @@ bool Trapezoid::operator==(const Figure& other) const {
     double b = std::sqrt(std::pow((points[2].x - points[3].x), 2) + std::pow((points[2].y - points[3].y), 2));
     double h = std::abs(points[0].y - points[2].y);
 
-    double othera = std::sqrt(std::pow((oPoints[1].x - oPoints[0].x), 2) + std::pow((oPoints[1].y - oPoints[0].y), 2));
-    double otherb = std::sqrt(std::pow((oPoints[2].x - oPoints[3].x), 2) + std::pow((oPoints[2].y - oPoints[3].y), 2));
-    double otherh = std::abs(oPoints[0].y - oPoints[2].y);
+    double other_a = std::sqrt(std::pow((oPoints[1].x - oPoints[0].x), 2) + std::pow((oPoints[1].y - oPoints[0].y), 2));
+    double other_b = std::sqrt(std::pow((oPoints[2].x - oPoints[3].x), 2) + std::pow((oPoints[2].y - oPoints[3].y), 2));
+    double other_h = std::abs(oPoints[0].y - oPoints[2].y);
 
-    return (a == othera) && (b == otherb) && (h == otherh);
+    return (a == other_a) && (b == other_b) && (h == other_h);
 }
 
 void Trapezoid::print(std::ostream& os) const {
